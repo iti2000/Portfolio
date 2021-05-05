@@ -361,16 +361,17 @@ nav ul {
 .form-section form button {
   width: 100%;
   padding: 1rem;
-  background: #154353;
+  background: #084964;
   color: white;
 }
 
 .form-section form button:focus {
-  background: #33696b;
+  background: #0c2f3d;
 }
 
 footer {
-  background: #154353;
+  background: -webkit-gradient(linear, left top, right top, from(#084964), to(#03ad7a));
+  background: linear-gradient(left, #084964, #03ad7a);
   color: white;
   min-height: 10vh;
   padding: 0% 5%;
