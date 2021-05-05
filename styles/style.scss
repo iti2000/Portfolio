@@ -1,0 +1,99 @@
+$header1: 2.5rem;
+$header2: 4rem;
+$header3: 2.5rem;
+$header4: 2rem;
+$text: 2.5rem;
+$gradient: linear-gradient(left, #38d39f, #38a4d3);
+$background-color: #154353;
+$gray-text: #2c2c2c;
+
+// $header2: calc(2rem + 1vw);  -->this will not work
+
+// $header2: 4rem;              --->this will work
+// h2{
+//     font-size: calc($header2 + vw);
+// }
+
+@mixin flex($justify, $align, $direction) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+@import "global";
+@import "intro";
+@import "project";
+@import "contact";
+@import "footer";
+
+@media  screen and (max-width: 1110px ) {
+  html {
+    font-size: 53%;
+  }
+  // nav{
+  //   width: 100%;
+  // }
+  // .splash{
+  //   display: none;
+  // }
+  svg{
+    width: 80%;
+  }
+  
+}
+
+@media  screen and (max-width: 754px ) {
+  html{
+    font-size: 45%;
+  }
+ 
+  nav{
+    width: 100%;
+  }
+  .splash{
+       display: none;
+    }
+  svg{
+    height: 60%;
+    margin-top: 3rem;
+  }
+  .main-head{
+    width: 100%;
+  }
+  nav{
+    .logo{
+      @include flex(center,center,row);
+      flex: 1 1 20rem;
+      margin-top: 2rem;
+    }
+    ul{
+      flex: 1 1 60rem;
+      margin: 2rem 0rem;
+    }
+  }
+  .intro-text{
+    margin-top: 5rem ;
+    text-align: center;
+  }
+  .intro-images{
+    text-align: center
+  }
+  .intro-social{
+    @include flex(center,center,row);
+    a{
+      margin: 2rem;
+    }
+  }
+  .elena,.travelly{
+    flex: 1 1 50rem;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  form{
+    padding: 0;
+    width: 80%;
+  }
+}
